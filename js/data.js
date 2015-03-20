@@ -1,0 +1,337 @@
+var types = {
+  1:'econom',
+  2:'standard',
+  3:'elite',
+  4:'lux',
+  5:'penthouse'
+};
+var states = {
+  1:'great',
+  2:'normal',
+  3:'bad'
+};
+var user = {
+  name:'John Smith',
+  money:5000,
+  loan:0,
+  loanpaid:0
+};
+var flats = [
+  {
+    internet:true,
+    floor:2,
+    floors:10,
+    state:2,
+    cost:48900,
+    rent:320,
+    user:false,
+    type:1,
+    rooms:[
+      {
+        name:'aaa',
+        square:15
+      },
+      {
+        name:'bbb',
+        square:12
+      }
+    ],
+    baths:[
+      {
+        square:5,
+        bidet:true,
+        pan:true,
+        shower:true,
+        bath:true,
+        washstand:true,
+        washer:true
+      }
+    ],
+    kitchen:[
+      {
+        square:9,
+        washer:true,
+        dishwasher:true,
+        oven:true
+      }
+    ]
+  },
+  {
+    internet:true,
+    floor:3,
+    floors:10,
+    state:1,
+    cost:35600,
+    rent:180,
+    user:false,
+    type:3,
+    rooms:[
+      {
+        name:'aaa',
+        square:15
+      }
+    ],
+    baths:[
+      {
+        square:5,
+        bidet:true,
+        pan:true,
+        shower:true,
+        bath:true,
+        washstand:true,
+        washer:true
+      }
+    ],
+    kitchen:[
+      {
+        square:9,
+        washer:true,
+        dishwasher:true,
+        oven:true
+      }
+    ]
+  },
+  {
+    internet:true,
+    floor:10,
+    floors:10,
+    state:3,
+    cost:75000,
+    rent:500,
+    user:false,
+    type:2,
+    rooms:[
+      {
+        name:'aaa',
+        square:15
+      },
+      {
+        name:'bbb',
+        square:12
+      },
+      {
+        name:'bbb',
+        square:12
+      }
+    ],
+    baths:[
+      {
+        square:5,
+        bidet:true,
+        pan:true,
+        shower:true,
+        bath:true,
+        washstand:true,
+        washer:true
+      }
+    ],
+    kitchen:[
+      {
+        square:9,
+        washer:true,
+        dishwasher:true,
+        oven:true
+      }
+    ]
+  },
+  {
+    internet:true,
+    floor:3,
+    floors:10,
+    state:1,
+    cost:35600,
+    rent:180,
+    user:false,
+    type:3,
+    rooms:[
+      {
+        name:'aaa',
+        square:15
+      }
+    ],
+    baths:[
+      {
+        square:5,
+        bidet:true,
+        pan:true,
+        shower:true,
+        bath:true,
+        washstand:true,
+        washer:true
+      }
+    ],
+    kitchen:[
+      {
+        square:9,
+        washer:true,
+        dishwasher:true,
+        oven:true
+      }
+    ]
+  },
+  {
+    internet:true,
+    floor:3,
+    floors:10,
+    state:1,
+    cost:35600,
+    rent:180,
+    user:false,
+    type:3,
+    rooms:[
+      {
+        name:'aaa',
+        square:15
+      }
+    ],
+    baths:[
+      {
+        square:5,
+        bidet:true,
+        pan:true,
+        shower:true,
+        bath:true,
+        washstand:true,
+        washer:true
+      }
+    ],
+    kitchen:[
+      {
+        square:9,
+        washer:true,
+        dishwasher:true,
+        oven:true
+      }
+    ]
+  },
+  {
+    internet:true,
+    floor:3,
+    floors:10,
+    state:1,
+    cost:35600,
+    rent:180,
+    user:false,
+    type:3,
+    rooms:[
+      {
+        name:'aaa',
+        square:15
+      }
+    ],
+    baths:[
+      {
+        square:5,
+        bidet:true,
+        pan:true,
+        shower:true,
+        bath:true,
+        washstand:true,
+        washer:true
+      }
+    ],
+    kitchen:[
+      {
+        square:9,
+        washer:true,
+        dishwasher:true,
+        oven:true
+      }
+    ]
+  },
+  {
+    internet:true,
+    floor:3,
+    floors:10,
+    state:1,
+    cost:35600,
+    rent:180,
+    user:false,
+    type:3,
+    rooms:[
+      {
+        name:'aaa',
+        square:15
+      }
+    ],
+    baths:[
+      {
+        square:5,
+        bidet:true,
+        pan:true,
+        shower:true,
+        bath:true,
+        washstand:true,
+        washer:true
+      }
+    ],
+    kitchen:[
+      {
+        square:9,
+        washer:true,
+        dishwasher:true,
+        oven:true
+      }
+    ]
+  },
+  {
+    internet:true,
+    floor:3,
+    floors:10,
+    state:3,
+    cost:12300,
+    rent:30,
+    user:false,
+    type:1,
+    rooms:[
+      {
+        name:'aaa',
+        square:15
+      }
+    ],
+    baths:[
+      {
+        square:5,
+        bidet:true,
+        pan:true,
+        shower:true,
+        bath:true,
+        washstand:true,
+        washer:true
+      }
+    ],
+    kitchen:[
+      {
+        square:9,
+        washer:true,
+        dishwasher:true,
+        oven:true
+      }
+    ]
+  }
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

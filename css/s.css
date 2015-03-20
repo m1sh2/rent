@@ -1,0 +1,370 @@
+
+@font-face {
+  font-family: 'Fredoka One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fredoka One'), local('FredokaOne-Regular'), url(FredokaOne.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+*{
+  outline:none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+html{
+  background:#333;
+}
+
+body{
+  position:relative;
+  margin:0;
+  padding:0;
+  height:100%;
+  color:#fff;
+  font-family:'Fredoka One',cursive;
+}
+div{
+  
+}
+button{
+  font-family:'Fredoka One',cursive;
+  color:#fff;
+  background:#86ceae;
+  border:3px solid #fff;
+  border-radius:5px;
+}
+button:active{
+  background:#fff;
+  color:#86ceae;
+}
+.d1,
+.d2{
+  background:#000;
+  width:50%;
+  height:100%;
+  min-height:250px;
+  margin:0;
+  position:absolute;
+  display:block;
+  border-radius:0%;
+  z-index:1;
+}
+.d1{
+  left:0;
+  top:0px;
+}
+.d2{
+  right:0px;
+  top:0px;
+}
+.b{
+  display:block;
+  width:50px;
+  height:50px;
+  background:#f00;
+  border:0px dashed #fff;
+  position:absolute;
+  left:0px;
+  top:0px;
+  z-index:-1;
+  box-shadow:inset 0 0 1px 0px #fff;
+}
+.b:active{
+  background:#ccc;
+}
+
+h3{
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.flats{
+  overflow:hidden;
+}
+.flat-item{
+  display:block;
+  float:left;
+  width: 45%;
+  width: -webkit-calc(50% - 5px);
+  width: -moz-calc(50% - 5px);
+  width: calc(50% - 5px);
+  height:100px;
+  margin:0 0 10px 0;
+}
+.flat-item:nth-child(2n+1){
+  margin:0px 10px 10px 0;
+}
+
+.buysell{
+  width: 200px;
+  height: 50px;
+  margin: 0 auto 20px;
+  display: block;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  text-align: center;
+  background: #86ceae;
+  color: #fff;
+  font-family: 'Fredoka One',cursive;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.panel{
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:40px;
+  display:block;
+  z-index:2;
+}
+.panel .month{
+  float:right;
+  width:40%;
+  text-align:right;
+  line-height:40px;
+  padding-right:20px;
+  display:none;
+}
+.panel .moneyblock{
+  position: absolute;
+  width: auto;
+  right: 18px;
+  top: 0px;
+}
+.panel .moneyblock .money{
+  line-height:40px;
+}
+.panel .moneyblock .addmoney{
+  width:20px;
+  height:20px;
+  line-height:12px;
+  text-align:center;
+  padding:0;
+}
+.panel .loan{
+  position:absolute;
+  top: 55px;
+  right: 18px;
+  font-size: 10px;
+  color: #f00;
+}
+.panel .month .days{
+  
+}
+.panel .in{
+  position:absolute;
+  line-height:40px;
+  top:16px;
+  right: 18px;
+  font-size:12px;
+  color:#090;
+}
+.panel .out{
+  position:absolute;
+  line-height:40px;
+  top:29px;
+  right:18px;
+  font-size:12px;
+  color:red;
+}
+
+.copy{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  text-align:center;
+  font-size:12px;
+  line-height:50px;
+  height:50px;
+  display:block;
+  z-index:2;
+  padding:0;
+  margin:0;
+  list-style:none;
+}
+.copy li{
+  display:inline-block;
+}
+.copy li button{
+  height:40px;
+}
+.bg{
+  position:fixed;
+  width:100%;
+  height:100%;
+  left:0;
+  top:0;
+  z-index:0;
+  background: rgba(179,220,237,1);
+  background: -moz-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(179,220,237,1)), color-stop(50%, rgba(41,184,229,1)), color-stop(100%, rgba(188,224,238,1)));
+  background: -webkit-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+  background: -o-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+  background: -ms-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+  background: linear-gradient(to bottom, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=0 );
+}
+.body{
+  overflow:auto;
+  z-index:1;
+  position:fixed;
+  padding:50px 18px 30px;
+  background:rgba(0, 178, 255, 0.73);
+  left:0;
+  top:0;
+}
+.back{
+  position:fixed;
+  left: 18px;
+  top: 12px;
+  z-index:5;
+  display:none;
+}
+.alert{
+  background:#f00;
+  position:fixed;
+  top:20%;
+  left:50%;
+  width:200px;
+  margin:0 0 0 -100px;
+  z-index:5;
+  display:none;
+  border:3px solid #fff;
+  border-radius:5px;
+  box-shadow:0 10px 0px 5px rgba(0,0,0,0.3);
+}
+.alert-content{
+  padding:20px;
+  color:#fff;
+}
+.alert-close{
+  background:#86ceae;
+  position:absolute;
+  top:-13px;
+  right:-13px;
+  width:20px;
+  height:20px;
+  color:#fff;
+  text-align:center;
+  line-height:18px;
+  font-size:12px;
+  border:3px solid #fff;
+  border-radius:10px;
+}
+
+.preload{
+  display:block;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:#86ceae url(../images/logo_rent100-2.png) no-repeat 50% 50%;
+  color:#999;
+  z-index:100;
+}
+.preload .preloader{
+  position: absolute;
+  width: 198px;
+  left: 50%;
+  margin-left: -99px;
+  height: 34px;
+  bottom: 30px;
+  background: #86ceae;
+  padding: 1px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.preload .preloader img{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.preload .preloader .preloaderbg{
+  position:relative;
+  height:100%;
+  width:0%;
+  background:#fff;
+  display:block;
+}
+
+#bg{
+  background:;
+  position:absolute;
+  z-index:1;
+  left:0px;
+  top:0px;
+}
+.logo{
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  margin-left: -15px;
+  top: 10px;
+}
+#cars,#planes,#boards,#sky{
+  background:;
+  position:absolute;
+  z-index:1;
+  left:0px;
+  top:0px;
+}
+.amount{
+  width: 200px;
+  height: 50px;
+  margin: 0 auto 20px;
+  display: block;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  text-align: center;
+  background: #86ceae;
+  color: #fff;
+  font-family: 'Fredoka One',cursive;
+  font-size: 30px;
+}
+/*.car{
+  background:#f00;
+  display:block;
+  position:absolute;
+  width:20px;
+  height:12px;
+  left:10px;
+  top:270px;
+  z-index:2;
+}*/
+
+canvas{
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

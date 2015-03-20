@@ -1,0 +1,14 @@
+<widget id="com.rent.rent" version="0.0.1">
+        <name>Rent</name>
+        <description>
+            Rental game
+        </description>
+        <author email="info@datsko.it" href="http://datsko.it">
+            Datsko IT
+        </author>
+        <content src="index.html" />
+        <access origin="*" />
+        <preference name="Fullscreen" value="true" />
+        <preference name="Orientation" value="portrait" />
+        <preference name="HideKeyboardFormAccessoryBar" value="true"/>
+</widget>
