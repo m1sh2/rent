@@ -345,13 +345,39 @@ canvas{
   
 }
 
+.plane1{
+  position:absolute;
+  z-index:1;
+  left:-100px;
+  top:200px;
+}
+.plane2{
+  position:absolute;
+  z-index:1;
+  left:1000px;
+  top:150px;
+}
+
+.plane1_ani{
+  -webkit-animation-name: fly1;
+  -webkit-animation-duration: 20s;
+  animation-name: fly1;
+  animation-duration: 20s;
+}
 
 
 
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fly1 {
+    0%   {left:-100px;}
+    100% {left:1100px;}
+}
 
-
-
-
+/* Standard syntax */
+@keyframes fly1 {
+    0%   {left:-100px;}
+    100% {left:1100px;}
+}
 
 
 

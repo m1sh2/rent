@@ -27,6 +27,8 @@ var ac = $('canvas#cars');
 var ap = $('canvas#planes');
 var ab = $('canvas#boards');
 var as = $('canvas#sky');
+var plane1 = $('.plane1');
+var plane2 = $('.plane2');
 var houses = [
 {f:5,t:3,o:1,w:7,h:7,s:8,c:'#333'},
 {f:9,t:4,o:1,w:9,h:9,s:9,c:'#66c'},
@@ -53,24 +55,24 @@ $('.panel .money,.panel .loan,.panel .out,.panel .in').autoNumeric('init',{
 });
 
 
-if(h<400){
+//if(h<400){
   console.info(h);
-  var hnew = h;
-  var wnew = hnew*1000/400;
-  bg.css({'height':hnew+'px','width':wnew+'px'});
-  ac.css({'height':hnew+'px','width':wnew+'px'});
-  ap.css({'height':hnew+'px','width':wnew+'px'});
-  ab.css({'height':hnew+'px','width':wnew+'px'});
-  as.css({'height':hnew+'px','width':wnew+'px'});
-}
-else if(h>=400){
-  var topnew = (h-400)/2;
-  bg.css({'top':topnew+'px'});
-  ac.css({'top':topnew+'px'});
-  ap.css({'top':topnew+'px'});
-  ab.css({'top':topnew+'px'});
-  as.css({'top':topnew+'px'});
-}
+  //var hnew = h;
+  //var wnew = hnew*1000/400;
+  //bg.css({'height':hnew+'px','width':wnew+'px'});
+  //ac.css({'height':hnew+'px','width':wnew+'px'});
+  //ap.css({'height':hnew+'px','width':wnew+'px'});
+  //ab.css({'height':hnew+'px','width':wnew+'px'});
+  //as.css({'height':hnew+'px','width':wnew+'px'});
+//}
+//else if(h>=400){
+  //var topnew = (h-400)/2;
+  //bg.css({'top':topnew+'px'});
+  //ac.css({'top':topnew+'px'});
+  //ap.css({'top':topnew+'px'});
+  //ab.css({'top':topnew+'px'});
+  //as.css({'top':topnew+'px'});
+//}
 
 
 
@@ -87,6 +89,8 @@ $(document).ready(function(){
     'height':h-80+'px',
     'width':w-36+'px'
   });
+  //plane1.addClass('plane1_ani');
+  //plane1.animate({left:'1000px'},20000);
   //$('.b:first-child').click(function(){
     //anim();
   //});
@@ -97,6 +101,24 @@ $(document).ready(function(){
   //Click();
   //$('body').append('<div class=""></div>')
 });
+//function AnimTrans(act,layer,time,x){
+//  var x0 = -100;
+//  act.animateLayer(layer,{
+//    x:x
+//  },(time*1000),function(){
+//    if(x==-100){
+//      x0 = 1100;
+//    }
+//    if((layer=='sky2'||layer=='sky3')&&time<70){
+//      time = 70;
+//    }
+//    act.setLayer(layer,{
+//      x:x0
+//    }).drawLayers();
+//    
+//    AnimTrans(act,layer,time,x);
+//  });
+//}
 function AnimTrans(act,layer,time,x){
   var x0 = -100;
   act.animateLayer(layer,{
@@ -183,96 +205,96 @@ function Builds(){
   }
   
   
-  as.drawImage({
-    source: 'images/sky1.png',
-    x: -100,
-    y: 0,
-    fromCenter:false,
-    layer:true,
-    name:'sky1'
-  });
-  as.drawImage({
-    source: 'images/sky2.png',
-    x: 300,
-    y: 0,
-    fromCenter:false,
-    layer:true,
-    name:'sky2'
-  });
-  as.drawImage({
-    source: 'images/sky3.png',
-    x: 700,
-    y: 0,
-    fromCenter:false,
-    layer:true,
-    name:'sky3'
-  });
-  ac.drawRect({
-    fillStyle: '#f00',
-    x: 1100,
-    y: 245,
-    width: 20,
-    height: 12,
-    fromCenter:false,
-    layer:true,
-    name:'car2'
-  });
-  ac.drawRect({
-    fillStyle: '#f00',
-    x: -100,
-    y: 255,
-    width: 20,
-    height: 12,
-    fromCenter:false,
-    layer:true,
-    name:'car1'
-  });
-  ap.drawImage({
-    source: 'images/plane1.png',
-    x: -100,
-    y: 0,
-    fromCenter:false,
-    layer:true,
-    name:'plane1'
-  });
-  ap.drawImage({
-    source: 'images/plane2.png',
-    x: 1100,
-    y: 50,
-    fromCenter:false,
-    layer:true,
-    name:'plane2'
-  });
-  ab.drawRect({
-    fillStyle: '#00f',
-    x: -100,
-    y: 370,
-    width: 30,
-    height: 15,
-    fromCenter:false,
-    layer:true,
-    name:'board1'
-  });
-  ab.drawRect({
-    fillStyle: '#00f',
-    x: 1100,
-    y: 320,
-    width: 30,
-    height: 15,
-    fromCenter:false,
-    layer:true,
-    name:'board2'
-  });
+  //as.drawImage({
+  //  source: 'images/sky1.png',
+  //  x: -100,
+  //  y: 0,
+  //  fromCenter:false,
+  //  layer:true,
+  //  name:'sky1'
+  //});
+  //as.drawImage({
+  //  source: 'images/sky2.png',
+  //  x: 300,
+  //  y: 0,
+  //  fromCenter:false,
+  //  layer:true,
+  //  name:'sky2'
+  //});
+  //as.drawImage({
+  //  source: 'images/sky3.png',
+  //  x: 700,
+  //  y: 0,
+  //  fromCenter:false,
+  //  layer:true,
+  //  name:'sky3'
+  //});
+  //ac.drawRect({
+  //  fillStyle: '#f00',
+  //  x: 1100,
+  //  y: 245,
+  //  width: 20,
+  //  height: 12,
+  //  fromCenter:false,
+  //  layer:true,
+  //  name:'car2'
+  //});
+  //ac.drawRect({
+  //  fillStyle: '#f00',
+  //  x: -100,
+  //  y: 255,
+  //  width: 20,
+  //  height: 12,
+  //  fromCenter:false,
+  //  layer:true,
+  //  name:'car1'
+  //});
+  //ap.drawImage({
+  //  source: 'images/plane1.png',
+  //  x: -100,
+  //  y: 0,
+  //  fromCenter:false,
+  //  layer:true,
+  //  name:'plane1'
+  //});
+  //ap.drawImage({
+  //  source: 'images/plane2.png',
+  //  x: 1100,
+  //  y: 50,
+  //  fromCenter:false,
+  //  layer:true,
+  //  name:'plane2'
+  //});
+  //ab.drawRect({
+  //  fillStyle: '#00f',
+  //  x: -100,
+  //  y: 370,
+  //  width: 30,
+  //  height: 15,
+  //  fromCenter:false,
+  //  layer:true,
+  //  name:'board1'
+  //});
+  //ab.drawRect({
+  //  fillStyle: '#00f',
+  //  x: 1100,
+  //  y: 320,
+  //  width: 30,
+  //  height: 15,
+  //  fromCenter:false,
+  //  layer:true,
+  //  name:'board2'
+  //});
   
-  AnimTrans(as,'sky1',70,1100);
-  AnimTrans(as,'sky2',40,1100);
-  AnimTrans(as,'sky3',20,1100);
-  AnimTrans(ac,'car1',40,1100);
-  AnimTrans(ac,'car2',40,-100);
-  AnimTrans(ap,'plane1',20,1100);
-  AnimTrans(ap,'plane2',20,-100);
-  AnimTrans(ab,'board1',30,1100);
-  AnimTrans(ab,'board2',30,-100);
+  //AnimTrans(as,'sky1',70,1100);
+  //AnimTrans(as,'sky2',40,1100);
+  //AnimTrans(as,'sky3',20,1100);
+  //AnimTrans(ac,'car1',40,1100);
+  //AnimTrans(ac,'car2',40,-100);
+  //AnimTrans(ap,'plane1',20,1100);
+  //AnimTrans(ap,'plane2',20,-100);
+  //AnimTrans(ab,'board1',30,1100);
+  //AnimTrans(ab,'board2',30,-100);
   
   
   
