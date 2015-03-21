@@ -5,6 +5,7 @@ var d2 = $('.d2');
 var body = $('.body');
 var doc = $(document);
 var back = $('.back');
+var mn = $('.main');
 var w = $('body').width();
 w = parseFloat(w);
 var h = doc.height();
@@ -89,7 +90,8 @@ $(document).ready(function(){
     'height':h-80+'px',
     'width':w-36+'px'
   });
-  TweenLite.to(".plane1", 20, {left:'1100px',ease: Power0.easeNone});
+  TweenMax.fromTo(".plane1",10,{left:'-100px'},{left:'1100px',ease: Power0.easeNone,repeat:-1});
+  TweenMax.fromTo(".plane2",10,{left:'1100px'},{left:'-100px',ease: Power0.easeNone,repeat:-1});
   //plane1.addClass('plane1_ani');
   //plane1.animate({left:'1000px'},20000);
   //$('.b:first-child').click(function(){
@@ -306,6 +308,7 @@ function Builds(){
   
   for(var i=0;i<houses.length;i++){
     var house=houses[i];
+    var housenew = $('<div/>');
     if(i>0){
       xb = xb+wb+sb;
     }
@@ -330,6 +333,13 @@ function Builds(){
       y: yb-35/2
     });
     
+    housenew.addClass('house').css({
+      'left':xb+'px',
+      'top':yb+'px',
+      'width':wb+'px',
+      'height':hb+'px'
+    });
+    mn.append(housenew);
     bg.drawRect({
       fillStyle: c,
       x: xb,
@@ -339,6 +349,7 @@ function Builds(){
       fromCenter:false,
       layer:true
     });
+    
     //var floor = f;
     for(var z=1;z<=f;z++){
       if(z>1){
@@ -367,6 +378,14 @@ function Builds(){
           
           //x = 10;
           //y = 50;
+          var winnew = $('<div/>');
+          winnew.addClass('window').css({
+            'left':xw+'px',
+            'top':yw+'px',
+            'width':w+'px',
+            'height':h+'px'
+          }).attr('data-id',id);
+          mn.append(winnew);
           bg.drawRect({
             fillStyle: '#999',
             x: xw,
@@ -391,6 +410,7 @@ function Builds(){
         });
       }
     }
+    
   }
   flats = Shuffle(flats);
   for(var i=1;i<=50;i++){
@@ -811,12 +831,15 @@ function Click(){
         break;
       }
       case'buy':{
-        bg.setLayerGroup(flats[id].id,{
-          fillStyle: '#ff0'
-        }).drawLayers();;
+        
         if(user.money>=flat.cost){
           flats[id].user = true;
           user.money = P(user.money-flats[id].cost);
+          $('.window[data-id="'+flats[id].id+'"]').addClass('on');
+          //console.info(flats[id].id);
+          bg.setLayerGroup(flats[id].id,{
+            fillStyle: '#ff0'
+          }).drawLayers();
           Panel();
           Flats();
         }
@@ -829,6 +852,7 @@ function Click(){
       case'sell':{
         flats[id].user = false;
         user.money = user.money+flats[id].cost;
+        $('.window[data-id="'+flats[id].id+'"]').removeClass('on');
         Panel();
         Flats();
         break;
@@ -902,7 +926,7 @@ function Shuffle(array){
 function ID(){
   var text = "";
   var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  for( var i=0; i < 5; i++ ){
+  for( var i=0; i < 8; i++ ){
     text += possible.charAt(Math.floor(Math.random() * possible.length));
   }
   return text;

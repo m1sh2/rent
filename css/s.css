@@ -302,6 +302,7 @@ h3{
   z-index:1;
   left:0px;
   top:0px;
+  display:none;
 }
 .logo{
   position: fixed;
@@ -341,6 +342,28 @@ h3{
   z-index:2;
 }*/
 
+.main{
+	display: block;
+	width: 1000px;
+	height: 400px;
+	border:1px dashed #333;
+	position: absolute;
+	left:0;
+	top: 0;
+}
+.house{
+	background:#333;
+	display: block;
+	position: absolute;
+}
+.window{
+	background:#999;
+	display: block;
+	position: absolute;
+}
+.window.on{
+	background:#ff0;
+}
 canvas{
   
 }
@@ -350,12 +373,14 @@ canvas{
   z-index:1;
   left:-100px;
   top:200px;
+  z-index: 10;
 }
 .plane2{
   position:absolute;
   z-index:1;
   left:1000px;
   top:150px;
+  z-index: 10;
 }
 
 .plane1_ani{
