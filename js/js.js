@@ -89,6 +89,7 @@ $(document).ready(function(){
     'height':h-80+'px',
     'width':w-36+'px'
   });
+  TweenLite.to(".plane1", 20, {left:'1100px',ease: Power0.easeNone});
   //plane1.addClass('plane1_ani');
   //plane1.animate({left:'1000px'},20000);
   //$('.b:first-child').click(function(){
