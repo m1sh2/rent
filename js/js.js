@@ -79,7 +79,7 @@ $('.panel .money,.panel .loan,.panel .out,.panel .in').autoNumeric('init',{
 
 
 $(document).ready(function(){
-  $('.preload .preloader .preloaderbg').animate({width:'100%'},1000,function(){
+  $('.preload .preloader .preloaderbg').animate({width:'100%'},5000,function(){
     $('.preload').hide();
     Builds();
     Update();
