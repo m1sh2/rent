@@ -270,8 +270,8 @@ function Credits(){
   back.data('target','home');
   //back.html('Back to home');
   body.append('<h1 align="center">Credits</h1>');
-  body.append('<p align="center"><img src="img/logo_datsko.png"></p>');
-  body.append('<p align="center"><a href="http://datsko.it">http://datsko.it</a></p>');
+  body.append('<p align="center"><img src="img/logo_datsko.png" style="background: #fff;"></p>');
+  body.append('<p align="center"><a href="https://datsko.net">https://datsko.net</a></p>');
   credits.push(['Programming','Mykhailo Datsko']);
   credits.push(['Game logic and levels','Mykhailo Datsko']);
   credits.push(['Design','Mykhailo Datsko<br>Maxim Prokopenko']);
@@ -547,7 +547,7 @@ function Restart(){
   Home();
 }
 function P(n){return parseInt(n);}
-function Click(){
+function drag(){
   $('button').unbind('click').click(function(){
     //Clear();
     var btn = $(this);
