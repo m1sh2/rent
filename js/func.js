@@ -569,9 +569,6 @@ function Restart() {
   user.flats += 1;
   user.rooms += flat.rooms;
 
-  console.log(Object.assign({}, user));
-  console.log(Object.assign({}, flats));
-
   $('#' + flat.id + '').attr('buy', 'yes');
 
   //Builds();
@@ -875,8 +872,18 @@ function El(el) {
 
 function Get(data) {
   var ls = localStorage;
-  data = JSON.parse(ls.getItem(data));
-  return data;
+  var item = ls.getItem(data);
+
+  if (item === 'undefined') {
+    ls.setItem(data, '');
+    item = '';
+  }
+
+  if (!item || typeof item === 'undefined') {
+    return {};
+  }
+
+  return JSON.parse(item);
 }
 
 function Set(data, dataname) {
